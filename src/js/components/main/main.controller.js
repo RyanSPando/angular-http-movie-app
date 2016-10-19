@@ -1,7 +1,7 @@
 (function() {
 
   'use strict';
-  const apiURL = 'http://www.omdbapi.com/\?';
+  const apiURL = 'https://www.omdbapi.com/\?';
   const view = '/movie';
   const home = '/';
   angular
@@ -12,7 +12,7 @@
 
   function mainController($scope, $http, $location, $q) {
     /*jshint validthis: true */
-    var vm = this; 
+    var vm = this;
     vm.searchStr = '';
     vm.movies = [];
     vm.movie = {};
