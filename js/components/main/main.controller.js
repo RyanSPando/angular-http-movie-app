@@ -12,7 +12,7 @@
 
   function mainController($scope, $http, $location, $q) {
     /*jshint validthis: true */
-    var vm = this;
+    var vm = this; 
     vm.searchStr = '';
     vm.movies = [];
     vm.movie = {};

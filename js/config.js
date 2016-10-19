@@ -9,10 +9,10 @@
   function appConfig($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'js/components/main/view.home.html',
+        templateUrl: 'js/components/main/view.home.html'
       })
       .when('/movie', {
-        templateUrl: 'js/components/movies/view.movie.html',
+        templateUrl: 'js/components/movies/view.movie.html'
       })
       .otherwise('/');
 
