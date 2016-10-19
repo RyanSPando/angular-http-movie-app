@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "staging": "angular-http-movie-app"
+  }
+}
