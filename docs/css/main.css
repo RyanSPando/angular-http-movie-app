@@ -1,0 +1,26 @@
+/* add custom styles */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+a.ng-enter {
+  -webkit-transition: 2s;
+  transition: 2s;
+  opacity: 0;
+}
+
+a.ng-enter-active {
+  opacity: 1;
+}
+
+a.ng-leave {
+  -webkit-transition: 2s;
+  transition: 2s;
+
+  opacity: 1;
+}
+
+a.ng-leave-active {
+  opacity: 0;
+}

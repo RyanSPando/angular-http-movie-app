@@ -1,0 +1,69 @@
+<div class="card-panel hoverable gray lighten-5" ng-show="mainCtrl.movie">
+  <div class="row ">
+    <h3 class="col s12">{{mainCtrl.movie.Title}}</h3>
+  </div>
+  <div class="row">
+    <div class="col s4">
+        <img ng-src="{{mainCtrl.movie.Poster}}" alt="Movie Poster"/>
+    </div>
+    <div class="col s8">
+      <p>
+        <strong>Starring: </strong> {{mainCtrl.movie.Actors}}
+      </p>
+      <p>
+        <strong>Plot:</strong> {{mainCtrl.movie.Plot}}
+      </p>
+      <h4>Additional Details</h4>
+      <h5>Awards</h5>
+      <p>
+        {{mainCtrl.movie.Awards}}
+      </p>
+      <h5>Country</h5>
+      <p>
+        {{mainCtrl.movie.Country}}
+      </p>
+      <h5>Director</h5>
+      <p>
+        {{mainCtrl.movie.Director}}
+      </p>
+      <h5>IMDB Rating</h5>
+      <p>
+        {{mainCtrl.movie.imdbRating}}
+      </p>
+      <h5>Language</h5>
+      <p>
+        {{mainCtrl.movie.Language}}
+      </p>
+      <h5>Metascore</h5>
+      <p>
+        {{mainCtrl.movie.Metascore}}
+      </p>
+      <h5>Rated</h5>
+      <p>
+        {{mainCtrl.movie.Rated}}
+      </p>
+      <h5>Release</h5>
+      <p>
+        {{mainCtrl.movie.Released}}
+      </p>
+      <h5>Runtime</h5>
+      <p>
+        {{mainCtrl.movie.Runtime}}
+      </p>
+      <h5>Writer</h5>
+      <p>
+        {{mainCtrl.movie.Writer}}
+      </p>
+      <h5>Year</h5>
+      <p>
+        {{mainCtrl.movie.Year}}
+      </p>
+      <div class="" ng-If="mainCtrl.movie.tomatoRating">
+        <h5>Rotten Tomatoes Rating</h5>
+        <p>
+          {{mainCtrl.movie.tomatoRating}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

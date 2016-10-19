@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>OMDB API</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <base href="/" target="/" />
+  </head>
+  <body ng-cloak ng-controller="mainController as mainCtrl">
+    <div class="container" >
+      <div class="row">
+        <div class="col s12 center-align">
+          <h3>Angular OMDB API Search</h3>
+        </div>
+      </div>
+      <div class="row">
+        <h4 class="center-align">Enter a movie title</h4>
+        <div class="col s6 push-s3">
+          <form name="formie" ng-submit="mainCtrl.apiRequest()">
+            <input type="text" name="searchStr" ng-model="mainCtrl.searchStr" placeholder="e.g Frozen">
+            <div class="row">
+              <div class="input-field col s6">
+                <select ng-model="mainCtrl.searchType">
+                  <option value="" selected>Search All</option>
+                  <option value="movie">Movies</option>
+                  <option value="series">Series</option>
+                  <option value="episode">Episode</option>
+                </select>
+                <label>Search Type (Movies, Series, Episodes)</label>
+              </div>
+              <div class="col s3">
+                <!-- Switch -->
+                <small>Rotten Tomatoes Rating?</small>
+                <div class="switch">
+                  <label>
+                    Off
+                    <input type="checkbox" ng-model="mainCtrl.tomatoes">
+                    <span class="lever"></span>
+                    On
+                  </label>
+                </div>
+              </div>
+              <div class="col s3">
+                <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
+               </button>
+              </div>
+            </div>
+            <input type="text" name="exclude" ng-model="mainCtrl.excludeStr" placeholder="e.g. Kevin Bacon if you want him excluded" id="exclude">
+            <label for="exclude">Filter results</label>
+          </form>
+        </div>
+      </div>
+      <div class="" ng-view></div>
+    </div>
+
+    <!-- scripts -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <!-- main component -->
+    <script type="text/javascript" src="js/components/main/main.controller.js"></script>
+    <script type="text/javascript" src="js/components/main/main.filter.js"></script>
+    <script type="text/javascript" src="js/components/main/main.controller.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+
+<div class="row">
+  <div class="col s6 push-s3" ng-if="mainCtrl.movies.length">
+    <div class="collection">
+      <a class="collection-item avatar" ng-repeat="movie in mainCtrl.moviesFull | objectFilter: mainCtrl.excludeStr"
+       ng-click="mainCtrl.singleMovie(movie.imdbID)">
+        <img ng-src="{{movie.Poster}}" alt="Poster" class="circle">
+        <span class="title">{{movie.Title}}</span>
+        <span class="right">Year: {{movie.Year}}
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
