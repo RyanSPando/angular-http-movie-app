@@ -33,7 +33,7 @@ gulp.task('javascript', () => {
 });
 
 gulp.task('jshint',() => {
-  return gulp.src('./src/**/*.js')
+  return gulp.src('./docs/**/*.js')
     .pipe(jshint({
       esnext: true
     }))
@@ -42,16 +42,16 @@ gulp.task('jshint',() => {
 });
 
 gulp.task('style', () => {
-  return gulp.src('src/**/*.js')
+  return gulp.src('./docs/**/*.js')
     .pipe(jscs())
     .pipe(jscs.reporter())
     .pipe(jscs.reporter('fail'));
 });
 
 gulp.task('watch', () => {
-  gulp.watch('./src/js/**/*.js', ['jshint', 'javascript', 'style']);
-  gulp.watch(['./src/*.html'], ['html']);
-  gulp.watch(['./src/css/*.css'], ['css']);
+  gulp.watch('./docs/js/**/*.js', ['jshint', 'javascript', 'style']);
+  gulp.watch(['./docs/*.html'], ['html']);
+  gulp.watch(['./docs/css/*.css'], ['css']);
 });
 
 // *** defailt task *** //
